@@ -1,6 +1,8 @@
 /**Jorge M., 2022-8-14 - 2022-8-16
   *Giraffe Project 06 - Figure out Arrays (Lessons 38 - 40) 49.5min
   *In this program, we will finish up the array tutorials
+  *(edit) I forgot one more Array tutorial, so I'll add it here.
+  *This allows me to test Git's editting functions.
   */
 
 	/*  Variable Library  */
@@ -9,6 +11,7 @@ let removedItem;													//Creates var removed item
 let pleasantFlow;													//Creates var pleasantFlow
 let greatGames;														//Creates Array greatGames
 let pleasantThings;													//Creates Array pleasantThings
+let shopList;														//Creates array shopList
 
 
 	/*To remove indices from an array, use ".pop()".
@@ -56,5 +59,12 @@ console.log('Adding pleasant thing:', pleasantFlow);				//Prints to console
 pleasantThings.unshift(pleasantFlow);								//Appends pleasantFlow to pleasantThings
 console.log('Things that are pleasant:', pleasantThings[0], ',', pleasantThings[1], ',',
 pleasantThings[2], ',', pleasantThings[3], '.',);					//Copy & paste
+console.log();														//Gives Room
+
+	/*Following Added 2022-8-17*/
+	/*Nested arrays are very important for storing information*/
+shopList = [['Chicken (in lbs)', 2],['Apples', 5], ['Juice', 2], ['Frozen Veggie Mix', 2],
+['Fresh Whiting (in lbs)', 2], ['Eggs (by dozen)', 1.5]]
+console.log(shopList);												//Prints onto Console
 console.log();														//Gives Room
 

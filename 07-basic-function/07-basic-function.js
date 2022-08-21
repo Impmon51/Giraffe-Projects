@@ -1,6 +1,9 @@
 /**Jorge M., 2022-8-17 - 2022-8-20
   *Giraffe Project 07 - Basic functions (Lessons 41 - 48) 1:08hour
   *In this program, we will explore how to make reusable code, using functions.
+  *Edit on 2022-8-21: {I found out what was wrong with tellList.
+  *In order for the array to be purely local, you must use 'let' within the function.
+  *Otherwise, it will default to global. I will comment out the original & fix it after.}
   */
 
 	/*  Variable Library  */
@@ -62,6 +65,8 @@ console.log();														//Gives room
 	 *a function will always go with the local
 	 */
 
+/*This is edited out on 2022-8-21, the correct code is below:
+
 shopList = ['Jeans', 'Socks', 'Jacket'];							//Initializes array shopList
 console.log(shopList[0], shopList[1], shopList[2]);					//Varargs & Prints onto Console
 console.log();														//Gives room
@@ -75,7 +80,20 @@ tellList();															//Calls function tellList (Changed shopList)
 console.log(shopList[0], shopList[1], shopList[2]);					//Copy & paste
 console.log();														//Gives room
 
-	/*Didn't seem to work <w<.... I'll have to ask experts about this*/
+	Didn't seem to work <w<.... I'll have to ask experts about this*/
+
+shopList = ['Jeans', 'Socks', 'Jacket'];							//Initializes array shopList
+console.log(shopList[0], shopList[1], shopList[2]);					//Varargs & Prints onto Console
+console.log();														//Gives room
+
+function tellList(){												//Creates function tellList
+	let shopList = ['Jeans', 'Jacket'];								//Reinitializes array shopList
+	console.log(shopList[0], shopList[1]);							//Varargs & prints onto Console
+}
+
+tellList();															//Calls function tellList (Changed shopList)
+console.log(shopList[0], shopList[1], shopList[2]);					//Copy & paste
+console.log();														//Gives room
 
 	/*Return statement helps you return values from functions*/
 	
